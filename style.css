@@ -1385,10 +1385,4 @@ dialog::backdrop {
     transition: none !important;
     scroll-behavior: auto !important;
   }
-  .site-background-video {
-    display: none;
-  }
-  .name-video-canvas {
-    display: none;
-  }
 }

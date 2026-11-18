@@ -24,6 +24,7 @@ const projects = [
     tags: 'Unity · C# · AR Foundation · On-Device ML',
     desc: 'An interactive Unity learning app that identifies PC hardware and teaches component assembly through augmented reality, lessons, and quizzes.',
     repoUrl: 'https://github.com/tippytaptip66/PCBUILDAR',
+    img: 'https://images.pexels.com/photos/6236574/pexels-photo-6236574.jpeg?auto=compress&cs=tinysrgb&w=800',
     fallbackGrad: ['#0900d6', '#6e27e1']
   },
   {
@@ -35,6 +36,7 @@ const projects = [
     tags: 'Apache NetBeans · AOOP · SQL',
     desc: 'A grocery application developed in Apache NetBeans as a final project for Advanced Object-Oriented Programming.',
     repoUrl: 'https://github.com/tippytaptip66/grocerapp',
+    img: 'https://images.pexels.com/photos/16211537/pexels-photo-16211537.jpeg?auto=compress&cs=tinysrgb&w=800',
     fallbackGrad: ['#6e27e1', '#f287c8']
   },
   {
@@ -46,6 +48,7 @@ const projects = [
     tags: 'HCI · Interactive Front End · Figma Recreation',
     desc: 'A static, interactive front-end recreation of a Bodega Figma prototype, with Home, Demo, and Our Story experiences.',
     repoUrl: 'https://github.com/tippytaptip66/HCI-BOD3G4',
+    img: 'https://images.pexels.com/photos/24862481/pexels-photo-24862481.jpeg?auto=compress&cs=tinysrgb&w=800',
     fallbackGrad: ['#0900d6', '#a32180']
   },
   {
@@ -57,6 +60,7 @@ const projects = [
     tags: 'Event Website · Front-End · Neon Visual Design',
     desc: 'A landing page for the College of Computer Studies at St. Timothy University, promoting its Tech Week exhibits, workshops, and competitions.',
     repoUrl: 'https://github.com/tippytaptip66/techweek-2026',
+    img: 'https://images.pexels.com/photos/36169770/pexels-photo-36169770.jpeg?auto=compress&cs=tinysrgb&w=800',
     fallbackGrad: ['#0900d6', '#6e27e1']
   },
   {
@@ -287,13 +291,28 @@ function initNameVideoFill() {
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
 
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const name = text.textContent.trim();
   let width = 0;
   let height = 0;
   let pixelRatio = 1;
   let frame = 0;
   let inView = false;
+
+  function requestVideoPlayback() {
+    video.autoplay = true;
+    video.loop = true;
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    const playback = video.play();
+    if (playback && typeof playback.catch === 'function') {
+      playback.catch(() => {
+        const retryPlayback = () => video.play().catch(() => {});
+        document.addEventListener('pointerdown', retryPlayback, { once: true, passive: true });
+        document.addEventListener('keydown', retryPlayback, { once: true });
+      });
+    }
+  }
 
   function resizeCanvas() {
     const bounds = text.getBoundingClientRect();
@@ -306,7 +325,7 @@ function initNameVideoFill() {
   }
 
   function drawNameFrame() {
-    if (reducedMotion.matches || video.readyState < 2 || !video.videoWidth || !width || !height) return;
+    if (video.readyState < 2 || !video.videoWidth || !width || !height) return;
 
     ctx.clearRect(0, 0, width, height);
     const scale = Math.max(width / video.videoWidth, height / video.videoHeight);
@@ -332,13 +351,13 @@ function initNameVideoFill() {
 
   function animateName() {
     frame = 0;
-    if (!inView || reducedMotion.matches) return;
+    if (!inView) return;
     drawNameFrame();
     frame = requestAnimationFrame(animateName);
   }
 
   function startAnimation() {
-    if (inView && !reducedMotion.matches && !frame) {
+    if (inView && !frame) {
       drawNameFrame();
       frame = requestAnimationFrame(animateName);
     }
@@ -351,6 +370,7 @@ function initNameVideoFill() {
   }
 
   resizeCanvas();
+  requestVideoPlayback();
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(([entry]) => {
       inView = entry.isIntersecting;
@@ -364,6 +384,7 @@ function initNameVideoFill() {
   }
 
   video.addEventListener('loadeddata', startAnimation);
+  video.addEventListener('play', startAnimation);
   window.addEventListener('resize', () => {
     resizeCanvas();
     drawNameFrame();
@@ -375,10 +396,6 @@ function initNameVideoFill() {
   if (document.fonts?.ready) document.fonts.ready.then(() => {
     resizeCanvas();
     drawNameFrame();
-  });
-  reducedMotion.addEventListener?.('change', () => {
-    if (reducedMotion.matches) stopAnimation();
-    else startAnimation();
   });
 }
 initNameVideoFill();
