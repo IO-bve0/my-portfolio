@@ -17,13 +17,13 @@ const toast = msg => {
 const projects = [
   {
     id: 1,
-    title: 'Atmospheric Horizon & Street Portrait',
+    title: 'Quiet Urban Street & Architecture',
     category: 'photography',
     categoryLabel: 'Photography',
     badgeClass: 'badge-photo',
-    tags: 'Sony A7IV · 85mm f/1.4 · Natural Light',
-    desc: 'An exploration of natural light and raw human presence in urban environments. Balanced chiaroscuro shadows with rich environmental context.',
-    img: 'https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tags: 'Urban Architecture · Street Photography · Natural Light',
+    desc: 'A study of an empty city street, its weathered facades, and the depth created by a quiet overcast day.',
+    img: 'https://images.pexels.com/photos/18502595/pexels-photo-18502595/free-photo-of-empty-street-in-city.jpeg?auto=compress&cs=tinysrgb&w=800',
     fallbackGrad: ['#0900d6', '#ff8cd1']
   },
   {
