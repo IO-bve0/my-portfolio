@@ -417,6 +417,27 @@ nav a:hover {
   -webkit-text-fill-color: transparent;
 }
 
+.name-video-wrap {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+.name-video-text {
+  display: inline-block;
+}
+
+.name-video-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
 .hero .hero-lead {
   color: rgba(255, 255, 255, 0.86);
 }
@@ -762,6 +783,16 @@ nav a:hover {
   cursor: pointer;
 }
 
+.project-card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-card-link:focus-visible {
+  outline: 3px solid var(--blue-primary);
+  outline-offset: 4px;
+}
+
 .project-card:hover {
   transform: translateY(-6px);
   border-color: var(--border-medium);
@@ -853,6 +884,17 @@ nav a:hover {
   color: var(--text-secondary);
   line-height: 1.55;
   margin: 0.3rem 0 0;
+}
+
+.project-repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: auto;
+  padding-top: 0.7rem;
+  color: var(--blue-primary);
+  font-size: 0.86rem;
+  font-weight: 700;
 }
 
 /* ==========================================================================
@@ -1344,6 +1386,9 @@ dialog::backdrop {
     scroll-behavior: auto !important;
   }
   .site-background-video {
+    display: none;
+  }
+  .name-video-canvas {
     display: none;
   }
 }

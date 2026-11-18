@@ -16,6 +16,50 @@ const toast = msg => {
 
 const projects = [
   {
+    id: 13,
+    title: 'PCBuildAR — AR PC Building & Learning',
+    category: 'coding',
+    categoryLabel: 'Coding',
+    badgeClass: 'badge-code',
+    tags: 'Unity · C# · AR Foundation · On-Device ML',
+    desc: 'An interactive Unity learning app that identifies PC hardware and teaches component assembly through augmented reality, lessons, and quizzes.',
+    repoUrl: 'https://github.com/tippytaptip66/PCBUILDAR',
+    fallbackGrad: ['#0900d6', '#6e27e1']
+  },
+  {
+    id: 14,
+    title: 'Grocerapp — Grocery Store Application',
+    category: 'coding',
+    categoryLabel: 'Coding',
+    badgeClass: 'badge-code',
+    tags: 'Apache NetBeans · AOOP · SQL',
+    desc: 'A grocery application developed in Apache NetBeans as a final project for Advanced Object-Oriented Programming.',
+    repoUrl: 'https://github.com/tippytaptip66/grocerapp',
+    fallbackGrad: ['#6e27e1', '#f287c8']
+  },
+  {
+    id: 15,
+    title: 'Bodega — HCI Interface Prototype',
+    category: 'design',
+    categoryLabel: 'UX / UI Design',
+    badgeClass: 'badge-design',
+    tags: 'HCI · Interactive Front End · Figma Recreation',
+    desc: 'A static, interactive front-end recreation of a Bodega Figma prototype, with Home, Demo, and Our Story experiences.',
+    repoUrl: 'https://github.com/tippytaptip66/HCI-BOD3G4',
+    fallbackGrad: ['#0900d6', '#a32180']
+  },
+  {
+    id: 16,
+    title: 'Tech Week 2026 — Event Landing Page',
+    category: 'coding',
+    categoryLabel: 'Coding',
+    badgeClass: 'badge-code',
+    tags: 'Event Website · Front-End · Neon Visual Design',
+    desc: 'A landing page for the College of Computer Studies at St. Timothy University, promoting its Tech Week exhibits, workshops, and competitions.',
+    repoUrl: 'https://github.com/tippytaptip66/techweek-2026',
+    fallbackGrad: ['#0900d6', '#6e27e1']
+  },
+  {
     id: 1,
     title: 'Quiet Urban Street & Architecture',
     category: 'photography',
@@ -176,20 +220,28 @@ function renderProjects(filter = 'all') {
   const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter);
 
   filtered.forEach(p => {
-    const card = document.createElement('article');
-    card.className = 'project-card';
+    const card = document.createElement(p.repoUrl ? 'a' : 'article');
+    card.className = `project-card${p.repoUrl ? ' project-card-link' : ''}`;
     card.dataset.category = p.category;
     card.dataset.id = p.id;
-    card.tabIndex = 0;
-    card.setAttribute('role', 'button');
-    card.setAttribute('aria-label', `View details for ${p.title}`);
+    if (p.repoUrl) {
+      card.href = p.repoUrl;
+      card.target = '_blank';
+      card.rel = 'noopener noreferrer';
+      card.setAttribute('aria-label', `Open ${p.title} repository on GitHub in a new tab`);
+    } else {
+      card.tabIndex = 0;
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-label', `View details for ${p.title}`);
+    }
 
     const fallback = fallbackSvg(p.title, p.category, p.fallbackGrad);
+    const imageSource = p.img || fallback;
 
     card.innerHTML = `
       <div class="project-thumb">
         <span class="project-category-badge ${p.badgeClass}">${p.categoryLabel}</span>
-        <img src="${p.img}" alt="${p.title}" loading="lazy">
+        <img src="${imageSource}" alt="${p.title} project preview" loading="lazy">
       </div>
       <div class="project-info">
         <span class="project-tags">${p.tags}</span>
@@ -198,6 +250,7 @@ function renderProjects(filter = 'all') {
           <svg class="project-arrow"><use href="#icon-arrow-up-right"/></svg>
         </h3>
         <p class="project-desc">${p.desc}</p>
+        ${p.repoUrl ? '<span class="project-repo-link">View repository on GitHub <span aria-hidden="true">↗</span></span>' : ''}
       </div>
     `;
 
@@ -207,20 +260,128 @@ function renderProjects(filter = 'all') {
       img.src = fallback;
     };
 
-    // Open detail modal on click or Enter key
-    const openModal = () => showProjectModal(p);
-    card.onclick = openModal;
-    card.onkeydown = e => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openModal();
-      }
-    };
+    // Sample cards open a detail modal; the real repository cards are direct links.
+    if (!p.repoUrl) {
+      const openModal = () => showProjectModal(p);
+      card.onclick = openModal;
+      card.onkeydown = e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModal();
+        }
+      };
+    }
 
     grid.appendChild(card);
   });
 }
 renderProjects();
+
+/* Video fill for the hero name */
+function initNameVideoFill() {
+  const video = $('.site-background-video');
+  const text = $('.name-video-text');
+  const canvas = $('.name-video-canvas');
+  if (!video || !text || !canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const name = text.textContent.trim();
+  let width = 0;
+  let height = 0;
+  let pixelRatio = 1;
+  let frame = 0;
+  let inView = false;
+
+  function resizeCanvas() {
+    const bounds = text.getBoundingClientRect();
+    pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+    width = bounds.width;
+    height = bounds.height;
+    canvas.width = Math.max(1, Math.round(width * pixelRatio));
+    canvas.height = Math.max(1, Math.round(height * pixelRatio));
+    ctx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+  }
+
+  function drawNameFrame() {
+    if (reducedMotion.matches || video.readyState < 2 || !video.videoWidth || !width || !height) return;
+
+    ctx.clearRect(0, 0, width, height);
+    const scale = Math.max(width / video.videoWidth, height / video.videoHeight);
+    const videoWidth = video.videoWidth * scale;
+    const videoHeight = video.videoHeight * scale;
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.drawImage(video, (width - videoWidth) / 2, (height - videoHeight) / 2, videoWidth, videoHeight);
+
+    const style = getComputedStyle(text);
+    ctx.font = `${style.fontStyle} ${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
+    if ('letterSpacing' in ctx) ctx.letterSpacing = style.letterSpacing;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'alphabetic';
+    const metrics = ctx.measureText(name);
+    const ascent = metrics.actualBoundingBoxAscent || height * 0.72;
+    const descent = metrics.actualBoundingBoxDescent || height * 0.12;
+    const baseline = (height + ascent - descent) / 2;
+    ctx.globalCompositeOperation = 'destination-in';
+    ctx.fillStyle = '#ffffff';
+    ctx.fillText(name, width / 2, baseline, width);
+    ctx.globalCompositeOperation = 'source-over';
+  }
+
+  function animateName() {
+    frame = 0;
+    if (!inView || reducedMotion.matches) return;
+    drawNameFrame();
+    frame = requestAnimationFrame(animateName);
+  }
+
+  function startAnimation() {
+    if (inView && !reducedMotion.matches && !frame) {
+      drawNameFrame();
+      frame = requestAnimationFrame(animateName);
+    }
+  }
+
+  function stopAnimation() {
+    if (frame) cancelAnimationFrame(frame);
+    frame = 0;
+    ctx.clearRect(0, 0, width, height);
+  }
+
+  resizeCanvas();
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(([entry]) => {
+      inView = entry.isIntersecting;
+      if (inView) startAnimation();
+      else stopAnimation();
+    });
+    observer.observe(text);
+  } else {
+    inView = true;
+    startAnimation();
+  }
+
+  video.addEventListener('loadeddata', startAnimation);
+  window.addEventListener('resize', () => {
+    resizeCanvas();
+    drawNameFrame();
+  });
+  if ('ResizeObserver' in window) new ResizeObserver(() => {
+    resizeCanvas();
+    drawNameFrame();
+  }).observe(text);
+  if (document.fonts?.ready) document.fonts.ready.then(() => {
+    resizeCanvas();
+    drawNameFrame();
+  });
+  reducedMotion.addEventListener?.('change', () => {
+    if (reducedMotion.matches) stopAnimation();
+    else startAnimation();
+  });
+}
+initNameVideoFill();
 
 /* Filter Button Handlers */
 $$('.filters .chip').forEach(btn => {
