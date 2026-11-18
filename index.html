@@ -3,352 +3,403 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Caelum Creatives | Architectural & Editorial Photography</title>
-<meta name="description" content="Caelum Creatives: precision architectural photography, brand editorials, portraits and fine art ocean horizons.">
+<title>Elmer Bacoro | Multidisciplinary Portfolio — Photography, Coding & Graphic Design</title>
+<meta name="description" content="Personal portfolio of Elmer Bacoro. Multidisciplinary creator specializing in photography, front-end web development, and graphic design.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">Skip to main content</a>
 
+<!-- Universal SVG Icons -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <symbol id="aperture" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-    <circle cx="24" cy="24" r="21"/>
-    <path d="M24 3l8 14M43 14L28 20M43 34L30 27M24 45l-8-14M5 34l14-7M5 14l15 6"/>
-    <circle cx="24" cy="24" r="4" fill="currentColor"/>
+  <symbol id="icon-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+    <circle cx="12" cy="13" r="4"/>
   </symbol>
-  <symbol id="seal" viewBox="0 0 100 100">
-    <circle cx="50" cy="50" r="47" fill="rgba(8, 16, 28, 0.85)" stroke="currentColor" stroke-width="1.5"/>
-    <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-dasharray="1.5 3" opacity="0.6"/>
-    <use href="#aperture" x="33" y="20" width="34" height="34"/>
-    <text x="50" y="68" text-anchor="middle" font-size="8.5" font-weight="700" letter-spacing="2" fill="currentColor" font-family="-apple-system,SF Pro Display,Inter,sans-serif">CAELUM</text>
-    <text x="50" y="79" text-anchor="middle" font-size="6.5" font-weight="500" letter-spacing="2" fill="currentColor" font-family="-apple-system,SF Pro Display,Inter,sans-serif">STUDIO &bull; PRO</text>
+  <symbol id="icon-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="16 18 22 12 16 6"/>
+    <polyline points="8 6 2 12 8 18"/>
   </symbol>
-  <symbol id="arrow" viewBox="0 0 20 20" fill="currentColor">
-    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+  <symbol id="icon-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+    <path d="M2 2l7.586 7.586"/>
+    <circle cx="11" cy="11" r="2"/>
   </symbol>
-  <filter id="mb"><feGaussianBlur id="mbf" stdDeviation="0 0"/></filter>
+  <symbol id="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="7" y1="17" x2="17" y2="7"/>
+    <polyline points="7 7 17 7 17 17"/>
+  </symbol>
+  <symbol id="icon-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  </symbol>
 </svg>
 
+<!-- Header & Nav -->
 <header>
-  <a class="logo" href="#home" aria-label="Caelum Creatives, home">
-    <svg aria-hidden="true"><use href="#aperture"/></svg>
-    <span class="logo-text"><span class="logo-bold">CAELUM</span><span class="logo-tag">STUDIO</span></span>
+  <a class="brand" href="#home" aria-label="Elmer Bacoro, home">
+    <span class="brand-monogram">EB</span>
+    <span class="brand-name">Elmer Bacoro</span>
   </a>
-  <nav aria-label="Main">
-    <a href="#motion">Motion</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#services">Services</a>
+  <nav aria-label="Primary Navigation">
+    <a href="#services">Disciplines</a>
+    <a href="#portfolio">Selected Work</a>
+    <a href="#skills">Skills &amp; Tech</a>
     <a href="#about">About</a>
-    <a href="#contact">Book</a>
-    <button class="btn ghost btn-sm" id="gridBtn" aria-pressed="false" title="Toggle optical viewfinder grid">
-      <span class="grid-dot"></span> Viewfinder Grid
-    </button>
+    <a href="#contact" class="btn btn-sm btn-nav">Get in Touch</a>
   </nav>
 </header>
 
 <main id="main">
-<section id="home" class="vf" aria-label="Viewfinder">
-  <div class="thirds" aria-hidden="true"></div>
-  <i class="bracket" aria-hidden="true"></i>
-  <i class="bracket" aria-hidden="true"></i>
-  <i class="bracket" aria-hidden="true"></i>
-  <i class="bracket" aria-hidden="true"></i>
-  <div class="crosshair" aria-hidden="true"></div>
-
-  <div class="pol" aria-hidden="true"><div></div><span class="pol-label"></span></div>
-  <div class="pol" aria-hidden="true"><div></div><span class="pol-label"></span></div>
-  <div class="pol" aria-hidden="true"><div></div><span class="pol-label"></span></div>
-
-  <div class="hero-card">
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="wrap hero-wrap">
     <div class="hero-badge">
-      <span class="badge-pulse"></span> SHOT ON MEDIUM FORMAT &bull; 100MP
+      <span class="pulse-dot"></span> Available for freelance projects &amp; collaborations
     </div>
-
-    <svg class="crest" viewBox="0 0 120 120" role="img" aria-label="Caelum Creatives crest">
-      <defs>
-        <path id="arc" d="M16 60a44 44 0 0 1 88 0"/>
-        <linearGradient id="crestGlow" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#1e3a8a"/>
-          <stop offset="100%" stop-color="#0a1526"/>
-        </linearGradient>
-      </defs>
-      <circle cx="60" cy="60" r="57" fill="url(#crestGlow)" stroke="#3b82f6" stroke-width="1.5" stroke-opacity="0.6"/>
-      <circle cx="60" cy="60" r="36" fill="none" stroke="#60a5fa" stroke-width="1" stroke-dasharray="2 3" opacity="0.7"/>
-      <text font-size="8.5" font-weight="700" letter-spacing="2.8" fill="#93c5fd" font-family="-apple-system,SF Pro Display,Inter,sans-serif"><textPath href="#arc" startOffset="50%" text-anchor="middle">CAELUM CREATIVES</textPath></text>
-      <use href="#aperture" x="38" y="38" width="44" height="44" color="#60a5fa"/>
-      <text x="60" y="99" text-anchor="middle" font-size="7" font-weight="600" letter-spacing="2.4" fill="#64748b" font-family="-apple-system,SF Pro Display,Inter,sans-serif">PRO PHOTOGRAPHY</text>
-    </svg>
-
-    <p class="tagline">CALM HORIZONS &bull; FLEETING MOMENTS &bull; ETERNAL MOTION</p>
-    <h1 id="h1" aria-live="polite">Calm Horizons</h1>
-    <p id="sub">Engineered stillness. Captured in natural and architectural light.</p>
     
-    <div class="exif-wrapper">
-      <span class="exif-label">OPTICS SPEC</span>
-      <p class="exif" aria-label="Camera settings"><span></span><span></span><span></span><span></span></p>
+    <h1 class="hero-title">
+      Hi, I'm <span class="text-gradient">Elmer Bacoro</span>.
+      <br>Creator of Visuals, Code &amp; Digital Experiences.
+    </h1>
+    
+    <p class="hero-lead">
+      I bridge the gap between creative visual arts and engineering. Specializing in 
+      <strong>photography</strong>, <strong>clean code development</strong>, and <strong>graphic design</strong>.
+    </p>
+
+    <!-- Discipline Tags -->
+    <div class="discipline-pills">
+      <div class="dp-item">
+        <svg class="dp-icon"><use href="#icon-camera"/></svg>
+        <span>Photography</span>
+      </div>
+      <div class="dp-item">
+        <svg class="dp-icon"><use href="#icon-code"/></svg>
+        <span>Coding</span>
+      </div>
+      <div class="dp-item">
+        <svg class="dp-icon"><use href="#icon-pen"/></svg>
+        <span>Graphic Design</span>
+      </div>
     </div>
 
-    <div class="moods" role="group" aria-label="Choose a mood">
-      <button class="chip" data-m="calm" aria-pressed="true">Calm Horizons</button>
-      <button class="chip" data-m="fleet" aria-pressed="false">Fleeting Moments</button>
-      <button class="chip" data-m="eternal" aria-pressed="false">Eternal Motion</button>
+    <!-- Actions -->
+    <div class="hero-actions">
+      <a href="#portfolio" class="btn btn-primary">
+        <span>View My Work</span>
+        <svg class="btn-icon"><use href="#icon-arrow-up-right"/></svg>
+      </a>
+      <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="hero-stats">
+      <div class="stat-card">
+        <span class="stat-num">5+</span>
+        <span class="stat-label">Years of Experience</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">45+</span>
+        <span class="stat-label">Projects Completed</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Attention to Detail</span>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="motion" aria-labelledby="mbh">
+<!-- Disciplines / What I Do -->
+<section id="services" class="section-tint">
   <div class="wrap">
     <div class="section-header">
-      <span class="sub-badge">HIGH-SPEED SHUTTER LAB</span>
-      <h2 id="mbh">Motion Blur Dynamics</h2>
-      <p class="lead">Drag the optical shutter speed to simulate sensor exposure times from frozen split-seconds to cinematic streaks.</p>
-    </div>
-    
-    <div class="mb-ctrl">
-      <div class="ctrl-group">
-        <label for="shutter">Exposure Time</label>
-        <output id="shutOut" for="shutter">1/15s</output>
-      </div>
-      <input id="shutter" type="range" min="0" max="6" step="1" value="3" aria-label="Shutter speed control">
-      <button class="btn ghost" id="freeze" aria-pressed="false">Freeze Exposure</button>
+      <span class="badge-sub">WHAT I DO</span>
+      <h2>Core Disciplines &amp; Expertise</h2>
+      <p class="lead">Three distinct creative practices unified by a passion for aesthetics and precision.</p>
     </div>
 
-    <div class="mb-view">
-      <div class="mb-track" id="mbTrack"></div>
+    <div class="disciplines-grid">
+      <!-- Photography -->
+      <div class="discipline-card">
+        <div class="card-icon-wrap icon-photo">
+          <svg><use href="#icon-camera"/></svg>
+        </div>
+        <span class="discipline-num">01 / CAPTURE</span>
+        <h3>Photography</h3>
+        <p>Documentary, portraiture, street architecture, and commercial product imagery. Focused on natural light, compelling framing, and rich color grading.</p>
+        <ul class="discipline-features">
+          <li>Editorial &amp; Lifestyle Portraits</li>
+          <li>Architectural &amp; Interior Captures</li>
+          <li>Product &amp; Commercial Flatlays</li>
+          <li>Lightroom Precision Retouching</li>
+        </ul>
+        <button class="card-filter-link" data-filter="photography">View Photography Works &rarr;</button>
+      </div>
+
+      <!-- Coding -->
+      <div class="discipline-card">
+        <div class="card-icon-wrap icon-code">
+          <svg><use href="#icon-code"/></svg>
+        </div>
+        <span class="discipline-num">02 / BUILD</span>
+        <h3>Coding &amp; Development</h3>
+        <p>Modern frontend engineering and web application development. Transforming designs into fluid, responsive, accessible, and fast digital realities.</p>
+        <ul class="discipline-features">
+          <li>Modern JavaScript / TypeScript</li>
+          <li>Responsive Web Apps (HTML5/CSS3)</li>
+          <li>Interactive UI &amp; Micro-interactions</li>
+          <li>Performance Optimization &amp; Clean Code</li>
+        </ul>
+        <button class="card-filter-link" data-filter="coding">View Coding Works &rarr;</button>
+      </div>
+
+      <!-- Graphic Design -->
+      <div class="discipline-card">
+        <div class="card-icon-wrap icon-design">
+          <svg><use href="#icon-pen"/></svg>
+        </div>
+        <span class="discipline-num">03 / DESIGN</span>
+        <h3>Graphic Designing</h3>
+        <p>Intentional visual identity systems, layout design, typography composition, and UI wireframing that communicate clarity and elevate brands.</p>
+        <ul class="discipline-features">
+          <li>Brand Identity &amp; Logo Systems</li>
+          <li>UI/UX Prototyping &amp; Design Systems</li>
+          <li>Poster &amp; Editorial Publication Layout</li>
+          <li>Social Media &amp; Digital Marketing Assets</li>
+        </ul>
+        <button class="card-filter-link" data-filter="design">View Design Works &rarr;</button>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- Portfolio Showcase (Photos from pexels.com) -->
 <section id="portfolio">
   <div class="wrap">
     <div class="section-header">
-      <span class="sub-badge">CURATED ARCHIVE</span>
-      <h2>Selected Works</h2>
-      <p class="lead">Precision compositions across architectural space, deep sea horizons, and editorial studies.</p>
+      <span class="badge-sub">PORTFOLIO</span>
+      <h2>Selected Projects &amp; Samples</h2>
+      <p class="lead">Curated projects across photography, web development, and graphic design.</p>
     </div>
 
-    <div class="filters" role="group" aria-label="Filter photos">
+    <!-- Filter Buttons -->
+    <div class="filters" role="group" aria-label="Filter portfolio projects">
       <button class="chip" data-f="all" aria-pressed="true">All Works</button>
-      <button class="chip" data-f="calm" aria-pressed="false">Calm Horizons</button>
-      <button class="chip" data-f="fleet" aria-pressed="false">Fleeting Moments</button>
-      <button class="chip" data-f="eternal" aria-pressed="false">Eternal Motion</button>
-      <button class="chip" data-f="prop" aria-pressed="false">Architectural</button>
+      <button class="chip" data-f="photography" aria-pressed="false">Photography</button>
+      <button class="chip" data-f="coding" aria-pressed="false">Coding</button>
+      <button class="chip" data-f="design" aria-pressed="false">Graphic Design</button>
     </div>
-    
-    <div class="grid" id="grid"></div>
+
+    <!-- Project Gallery Grid -->
+    <div class="project-grid" id="projectGrid"></div>
   </div>
 </section>
 
-<section id="services" class="tint">
+<!-- Skills & Tech Stack -->
+<section id="skills" class="section-tint">
   <div class="wrap">
     <div class="section-header">
-      <span class="sub-badge">COMMISSIONS & CAPABILITIES</span>
-      <h2>Production Services</h2>
-      <p class="lead">Select a commission tier to pre-populate the direct booking dispatch.</p>
+      <span class="badge-sub">TOOLKIT</span>
+      <h2>Skills &amp; Technologies</h2>
+      <p class="lead">The tools, languages, and creative software I employ daily.</p>
     </div>
 
-    <div class="cards">
-      <button class="card" data-svc="Portraits">
-        <div class="card-top">
-          <span class="card-tier">SERIES 01</span>
-          <span class="card-icon">&bull;</span>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Coding &amp; Development</h4>
+        <div class="skill-tags">
+          <span class="tag">JavaScript (ES6+)</span>
+          <span class="tag">HTML5 &amp; CSS3</span>
+          <span class="tag">React</span>
+          <span class="tag">Responsive UI/UX</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">Git &amp; GitHub</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Performance Tuning</span>
         </div>
-        <h3>Studio &amp; Portraiture</h3>
-        <p>Unhurried portrait sessions with sculpted chiaroscuro, natural ambient fill, and raw authenticity.</p>
-        <div class="card-cta">
-          <span>Configure Session</span>
-          <svg class="cta-arrow"><use href="#arrow"/></svg>
-        </div>
-      </button>
+      </div>
 
-      <button class="card" data-svc="@ Properties & Architectural">
-        <div class="card-top">
-          <span class="card-tier">SERIES 02</span>
-          <span class="card-icon">&bull;</span>
+      <div class="skill-group">
+        <h4>Graphic &amp; UI Design</h4>
+        <div class="skill-tags">
+          <span class="tag">Figma</span>
+          <span class="tag">Adobe Illustrator</span>
+          <span class="tag">Adobe Photoshop</span>
+          <span class="tag">Brand Identity</span>
+          <span class="tag">Wireframing</span>
+          <span class="tag">Typography</span>
+          <span class="tag">Color Theory</span>
+          <span class="tag">Design Systems</span>
         </div>
-        <h3>Architectural &amp; Properties</h3>
-        <p>Perspective-corrected wide captures, structural geometry, twilight captures for architects and premium spaces.</p>
-        <div class="card-cta">
-          <span>Configure Shoot</span>
-          <svg class="cta-arrow"><use href="#arrow"/></svg>
-        </div>
-      </button>
+      </div>
 
-      <button class="card" data-svc="Brand Editorials">
-        <div class="card-top">
-          <span class="card-tier">SERIES 03</span>
-          <span class="card-icon">&bull;</span>
+      <div class="skill-group">
+        <h4>Photography &amp; Media</h4>
+        <div class="skill-tags">
+          <span class="tag">Editorial Portraiture</span>
+          <span class="tag">Street Photography</span>
+          <span class="tag">Adobe Lightroom Classic</span>
+          <span class="tag">Color Grading</span>
+          <span class="tag">Natural &amp; Studio Lighting</span>
+          <span class="tag">Commercial Product</span>
+          <span class="tag">High-Resolution Retouching</span>
         </div>
-        <h3>Brand Editorials</h3>
-        <p>Cinematic brand storytelling, campaign imagery, and industrial design lookbooks with distinct color grading.</p>
-        <div class="card-cta">
-          <span>Configure Campaign</span>
-          <svg class="cta-arrow"><use href="#arrow"/></svg>
-        </div>
-      </button>
-
-      <button class="card" data-svc="Fine Art Sky Prints">
-        <div class="card-top">
-          <span class="card-tier">SERIES 04</span>
-          <span class="card-icon">&bull;</span>
-        </div>
-        <h3>Fine Art Deep Prints</h3>
-        <p>Numbered archival pigment prints on museum-grade cotton rag. Limited edition sea, storm, and horizon plates.</p>
-        <div class="card-cta">
-          <span>Inquire Catalog</span>
-          <svg class="cta-arrow"><use href="#arrow"/></svg>
-        </div>
-      </button>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- About Elmer Bacoro -->
 <section id="about">
-  <div class="wrap about">
-    <figure class="portrait">
-      <img id="profile" src="profile.jpg" alt="Portrait of the photographer behind Caelum Creatives" width="480" height="600">
-      <div class="portrait-badge">
-        <span class="pb-title">DIRECTOR / PHOTOGRAPHER</span>
-        <span class="pb-sub">CAELUM ARCHIVE</span>
+  <div class="wrap about-wrap">
+    <div class="about-photo-wrapper">
+      <img id="profileImg" src="https://images.pexels.com/photos/598917/pexels-photo-598917.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Elmer Bacoro holding a camera in creative workflow" width="480" height="560" loading="lazy">
+      <div class="about-photo-badge">
+        <span class="ap-name">Elmer Bacoro</span>
+        <span class="ap-title">Creator &bull; Developer &bull; Designer</span>
       </div>
-    </figure>
-    <div class="about-content">
-      <div class="section-header left-align">
-        <span class="sub-badge">PHILOSOPHY &amp; DESIGN SYSTEM</span>
-        <h2>About Caelum Studio</h2>
-      </div>
-      <p class="about-p">Caelum is Latin for sky and atmosphere. The studio operates with architectural discipline: calibrated optics, patience for the right angle of light, and an aversion to unnecessary clutter. Every frame balances high dynamic range with deep masculine tones.</p>
+    </div>
+
+    <div class="about-text-content">
+      <span class="badge-sub">ABOUT ME</span>
+      <h2>Designing with Purpose, Coding with Precision, Seeing with Light.</h2>
       
-      <div class="tech-spec-group">
-        <h3>Master Blue Palette</h3>
-        <p class="spec-lead">Click any tonal swatch to copy the hexadecimal value.</p>
-        <div class="swatches">
-          <button class="sw" data-hex="#060B13" style="background:#060B13;color:#94a3b8" aria-label="Copy Obsidian Blue, #060B13"><b>Obsidian</b>#060B13</button>
-          <button class="sw" data-hex="#0B1B2F" style="background:#0B1B2F;color:#cbd5e1" aria-label="Copy Midnight, #0B1B2F"><b>Midnight</b>#0B1B2F</button>
-          <button class="sw" data-hex="#12233C" style="background:#12233C;color:#e2e8f0" aria-label="Copy Deep Slate, #12233C"><b>Deep Slate</b>#12233C</button>
-          <button class="sw" data-hex="#1E3A63" style="background:#1E3A63;color:#f8fafc" aria-label="Copy Marine, #1E3A63"><b>Marine</b>#1E3A63</button>
-          <button class="sw" data-hex="#2563EB" style="background:#2563EB;color:#fff" aria-label="Copy Royal Cobalt, #2563EB"><b>Cobalt</b>#2563EB</button>
-          <button class="sw" data-hex="#38BDF8" style="background:#38BDF8;color:#0b1b2f" aria-label="Copy Electric Cyan, #38BDF8"><b>Cyan Glaze</b>#38BDF8</button>
-          <button class="sw" data-hex="#47668D" style="background:#47668D;color:#f8fafc" aria-label="Copy Steel Blue, #47668D"><b>Steel</b>#47668D</button>
+      <p class="about-bio">
+        I'm <strong>Elmer Bacoro</strong>, a multidisciplinary creator who loves the synergy between technical logic and visual aesthetics. Whether I'm framing a shot through a lens, writing responsive code for the web, or crafting brand visual identities in Figma, I focus on delivering work that is clean, memorable, and impactful.
+      </p>
+      
+      <p class="about-bio">
+        My hybrid skill set enables me to see projects from concept to execution: from conceptual sketching and graphic identity, to functional web architecture, and full photographic documentation.
+      </p>
+
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <strong>Creative Vision</strong>
+          <span>Translating ideas into cohesive visual languages across print and screens.</span>
+        </div>
+        <div class="highlight-item">
+          <strong>Clean Code Standards</strong>
+          <span>Writing scalable, clean, and accessible code that performs seamlessly.</span>
+        </div>
+        <div class="highlight-item">
+          <strong>Visual Storytelling</strong>
+          <span>Capturing depth, warmth, and genuine human connection through the lens.</span>
         </div>
       </div>
 
-      <div class="tech-spec-group">
-        <h3>Typography Specs</h3>
-        <div class="specs">
-          <div class="spec-card">
-            <p class="aa">Aa</p>
-            <p class="spec-title">SF Pro Display / Inter</p>
-            <p class="spec-desc">Primary headings, navigation, and structural hierarchy with tight optical tracking.</p>
-          </div>
-          <div class="spec-card">
-            <p class="aa mono">01</p>
-            <p class="spec-title">SF Mono / JetBrains</p>
-            <p class="spec-desc">EXIF camera statistics, focal lengths, shutter timings, and technical badges.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tech-spec-group">
-        <h3>Authenticity Seal</h3>
-        <div class="sealtile">
-          <svg aria-label="Caelum Creatives watermark seal" role="img"><use href="#seal"/></svg>
-          <div>
-            <h4>Digital Proof Watermark</h4>
-            <p>Embedded across all preview proofs. Can be toggled inside the modal lightbox inspect mode.</p>
-          </div>
-        </div>
+      <div class="about-cta-row">
+        <a href="#contact" class="btn btn-primary">Start a Project</a>
+        <a href="#portfolio" class="btn btn-secondary">Explore Work</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="tint">
+<!-- Contact Section -->
+<section id="contact" class="section-tint">
   <div class="wrap narrow">
     <div class="section-header">
-      <span class="sub-badge">INQUIRIES &amp; BOOKING</span>
-      <h2>Initiate a Project</h2>
-      <p class="lead">Submit project parameters below. Commission availability is updated weekly.</p>
+      <span class="badge-sub">LET'S CONNECT</span>
+      <h2>Have a Project in Mind?</h2>
+      <p class="lead">Whether you need photography, web development, or graphic design, let's build something exceptional together.</p>
     </div>
 
-    <form id="form" novalidate>
+    <form id="contactForm" novalidate>
       <div class="form-row">
         <div class="form-field">
           <label for="name">Your Name</label>
-          <input id="name" name="name" autocomplete="name" placeholder="Alexander Wright" required>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="John Doe" required>
         </div>
         <div class="form-field">
-          <label for="email">Direct Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" placeholder="name@domain.com" required>
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="john@example.com" required>
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-field">
-          <label for="service">Commission Tier</label>
+          <label for="service">Discipline / Project Type</label>
           <select id="service" name="service" required>
-            <option value="" disabled selected>Select a project tier</option>
-            <option>Studio &amp; Portraiture</option>
-            <option>Architectural &amp; Properties</option>
-            <option>Brand Editorials</option>
-            <option>Fine Art Deep Prints</option>
+            <option value="" disabled selected>Select service</option>
+            <option value="Photography">Photography (Portraits, Commercial, Events)</option>
+            <option value="Coding">Coding (Web Development, Interactive UI)</option>
+            <option value="Graphic Design">Graphic Designing (Branding, UI/UX, Assets)</option>
+            <option value="All Disciplines">Full Package (Design, Code &amp; Photography)</option>
           </select>
         </div>
         <div class="form-field">
-          <label for="date">Target Date</label>
-          <input id="date" name="date" type="date" required>
+          <label for="timeline">Timeline / Budget</label>
+          <input id="timeline" name="timeline" type="text" placeholder="e.g. Next month / Flexible">
         </div>
       </div>
 
       <div class="form-field">
-        <label for="msg">Project Scope &amp; Deliverables (Optional)</label>
-        <textarea id="msg" name="msg" rows="4" placeholder="Brief outline of locations, licensing, shot count, or creative direction..."></textarea>
+        <label for="message">Project Overview</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell me about your goals, deliverables, and vision..." required></textarea>
       </div>
 
-      <button class="btn btn-primary" type="submit">
-        <span>Transmit Project Inquiry</span>
-        <svg class="btn-icon"><use href="#arrow"/></svg>
+      <button class="btn btn-primary btn-submit" type="submit">
+        <span>Send Inquiry to Elmer Bacoro</span>
+        <svg class="btn-icon"><use href="#icon-arrow-up-right"/></svg>
       </button>
     </form>
-    <p id="ok" class="ok" role="status" hidden></p>
+    
+    <div id="formSuccess" class="form-status" hidden></div>
   </div>
 </section>
 </main>
 
+<!-- Footer -->
 <footer>
-  <div class="foot-inner">
-    <div class="foot-brand">
-      <span class="logo-bold">CAELUM</span><span class="logo-tag">STUDIO</span>
-      <p class="foot-sub">Precision Architectural &bull; Horizon Optics &bull; Fine Art Imagery</p>
+  <div class="wrap footer-wrap">
+    <div class="footer-left">
+      <div class="footer-brand">
+        <span class="brand-monogram">EB</span>
+        <span class="brand-name">Elmer Bacoro</span>
+      </div>
+      <p class="footer-tagline">Multidisciplinary Portfolio — Photography, Coding &amp; Graphic Design.</p>
     </div>
-    <div class="foot-legal">
-      <p>&copy; <span id="yr"></span> Caelum Creatives Studio. All visual assets encrypted &amp; copyright protected.</p>
-      <p class="foot-meta">ENGINEERED MINIMALIST BLUE ARCHITECTURE</p>
+    
+    <div class="footer-links">
+      <a href="#services">Disciplines</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> Elmer Bacoro. All rights reserved.</p>
+      <p class="footer-credit">Crafted with precision &amp; passion.</p>
     </div>
   </div>
 </footer>
 
-<dialog id="lb" aria-label="Photo viewer">
-  <div class="lbimg">
-    <img id="lbimg" alt="">
-    <svg class="wm" aria-hidden="true"><use href="#seal"/></svg>
+<!-- Project Lightbox Modal -->
+<dialog id="projectModal" aria-label="Project details view">
+  <div class="modal-media">
+    <img id="modalImg" src="" alt="">
   </div>
-  <div class="lbbar">
-    <div class="lbinfo">
-      <span class="lb-indicator">INSPECT MODE</span>
-      <p id="lbcap"></p>
+  <div class="modal-body">
+    <div class="modal-header-meta">
+      <span class="modal-category" id="modalCategory"></span>
+      <span class="modal-tags" id="modalTags"></span>
     </div>
-    <div class="lb-actions">
-      <button class="btn ghost btn-sm" id="wmBtn" aria-pressed="true">Seal: Visible</button>
-      <button class="btn btn-sm" id="lbClose">Close [ESC]</button>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <div class="modal-actions">
+      <button class="btn btn-secondary btn-sm" id="modalClose">Close [ESC]</button>
     </div>
   </div>
 </dialog>
 
+<!-- Toast -->
 <div id="toast" role="status" aria-live="polite"></div>
+
 <script src="script.js"></script>
 </body>
 </html>
