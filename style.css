@@ -1,36 +1,36 @@
 /* ==========================================================================
    ELMER BACORO — PERSONAL PORTFOLIO STYLESHEET
    Disciplines: Photography, Coding, Graphic Design
-   Aesthetic: Warm ivory, forest green, and copper
+   Aesthetic: Black, white, electric violet, and hot pink
    ========================================================================== */
 
 :root {
   /* Canvas & Light Surfaces */
-  --bg-deep: #f5f2e9;
-  --bg-canvas: #fbfaf6;
-  --bg-surface: #fffdf8;
-  --bg-surface-elevated: #eeeae0;
-  --bg-card: rgba(255, 253, 248, 0.9);
-  --bg-card-hover: rgba(255, 255, 252, 0.98);
+  --bg-deep: #ffffff;
+  --bg-canvas: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f6f3f9;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-card-hover: #ffffff;
 
   /* Hairlines & Borders */
-  --border-subtle: rgba(28, 59, 46, 0.09);
-  --border-medium: rgba(28, 59, 46, 0.16);
-  --border-focus: #36765c;
+  --border-subtle: rgba(0, 0, 0, 0.09);
+  --border-medium: rgba(0, 0, 0, 0.16);
+  --border-focus: #6e27e1;
 
   /* Accent Colors */
-  --blue-primary: #286b52;
-  --blue-accent: #377e63;
-  --blue-light: #36765c;
-  --cyan-accent: #4b8068;
-  --purple-accent: #94502f;
-  --gold-accent: #80642f;
+  --blue-primary: #6e27e1;
+  --blue-accent: #0900d6;
+  --blue-light: #6e27e1;
+  --cyan-accent: #a32180;
+  --purple-accent: #6e27e1;
+  --gold-accent: #a32180;
 
   /* Text Colors */
-  --text-white: #17382b;
-  --text-primary: #26382f;
-  --text-secondary: #58665d;
-  --text-muted: #777f76;
+  --text-white: #000000;
+  --text-primary: #17151a;
+  --text-secondary: #55515b;
+  --text-muted: #77727e;
 
   /* Fonts */
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
@@ -44,10 +44,10 @@
   --r-full: 9999px;
 
   /* Shadows */
-  --sh-sm: 0 2px 8px rgba(32, 53, 40, 0.07);
-  --sh-md: 0 8px 24px rgba(32, 53, 40, 0.1);
-  --sh-lg: 0 16px 44px rgba(32, 53, 40, 0.14);
-  --sh-glow: 0 0 24px rgba(55, 126, 99, 0.18);
+  --sh-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --sh-md: 0 8px 24px rgba(0, 0, 0, 0.09);
+  --sh-lg: 0 16px 44px rgba(0, 0, 0, 0.13);
+  --sh-glow: 0 0 24px rgba(110, 39, 225, 0.22);
 }
 
 *, *::before, *::after {
@@ -65,8 +65,8 @@ body {
   margin: 0;
   background-color: var(--bg-deep);
   background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -15%, rgba(75, 128, 104, 0.13), transparent 70%),
-    radial-gradient(ellipse 60% 40% at 90% 50%, rgba(166, 94, 59, 0.08), transparent 60%);
+    radial-gradient(ellipse 80% 50% at 50% -15%, rgba(110, 39, 225, 0.1), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 90% 50%, rgba(255, 140, 209, 0.12), transparent 60%);
   color: var(--text-primary);
   font-family: var(--font-sans);
   font-size: 16px;
@@ -148,9 +148,32 @@ section {
 }
 
 .section-tint {
-  background: linear-gradient(180deg, rgba(232, 239, 230, 0.72) 0%, rgba(245, 242, 233, 0.9) 100%);
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
+  color: #ffffff;
+  background: #000000;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.section-tint .section-header h2 {
+  color: #ffffff;
+}
+
+.section-tint .section-header .lead {
+  color: #d0cbd3;
+}
+
+.section-tint .badge-sub {
+  color: #ff8cd1;
+  background: rgba(255, 140, 209, 0.12);
+  border-color: rgba(255, 140, 209, 0.32);
+}
+
+.section-tint .contact-links a {
+  color: #ffffff;
+}
+
+.section-tint .contact-links a:hover {
+  color: #ff8cd1;
 }
 
 .section-header {
@@ -174,15 +197,15 @@ section {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--blue-primary);
-  background: rgba(55, 126, 99, 0.09);
-  border: 1px solid rgba(55, 126, 99, 0.2);
+  background: rgba(255, 140, 209, 0.12);
+  border: 1px solid rgba(110, 39, 225, 0.18);
   padding: 0.35em 0.9em;
   border-radius: var(--r-full);
   margin-bottom: 0.9rem;
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #17382b 20%, #36765c 60%, #94502f 100%);
+  background: linear-gradient(135deg, #0900d6 10%, #6e27e1 68%, #a32180 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -200,11 +223,11 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0.85rem 5vw;
-  background: rgba(251, 250, 246, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   backdrop-filter: blur(24px) saturate(180%);
   border-bottom: 1px solid var(--border-subtle);
-  box-shadow: 0 4px 20px rgba(32, 53, 40, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
 }
 
 .brand {
@@ -227,12 +250,12 @@ header {
   width: 34px;
   height: 34px;
   border-radius: var(--r-md);
-  background: linear-gradient(135deg, var(--blue-primary), var(--purple-accent));
+  background: linear-gradient(135deg, #0900d6, #ff8cd1);
   color: #ffffff;
   font-size: 0.88rem;
   font-weight: 800;
   letter-spacing: -0.02em;
-  box-shadow: 0 0 12px rgba(55, 126, 99, 0.25);
+  box-shadow: 0 0 12px rgba(110, 39, 225, 0.28);
 }
 
 .brand-name {
@@ -276,20 +299,20 @@ nav a:hover {
   padding: 0.75em 1.6em;
   color: #ffffff;
   background: var(--blue-primary);
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.32);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   transition: all 0.2s ease;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(40, 107, 82, 0.22);
+  box-shadow: 0 4px 14px rgba(110, 39, 225, 0.24);
 }
 
 .btn:hover {
   background: var(--blue-accent);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(40, 107, 82, 0.28);
+  box-shadow: 0 6px 20px rgba(110, 39, 225, 0.3);
 }
 
 .btn:active {
@@ -297,18 +320,18 @@ nav a:hover {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #286b52 0%, #20543f 100%);
+  background: linear-gradient(135deg, #0900d6 0%, #6e27e1 70%, #a32180 100%);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.82);
   color: var(--text-primary);
   border: 1px solid var(--border-medium);
   box-shadow: none;
 }
 
 .btn-secondary:hover {
-  background: rgba(238, 234, 224, 0.95);
+  background: rgba(246, 243, 249, 0.98);
   color: var(--text-white);
   border-color: var(--border-medium);
   box-shadow: var(--sh-sm);
@@ -335,11 +358,63 @@ nav a:hover {
    ========================================================================== */
 
 .hero {
+  isolation: isolate;
+  overflow: hidden;
+  color: #ffffff;
+  background: #000000;
   padding: 5.5rem 5vw 4.5rem;
   text-align: center;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.5) 52%, rgba(0, 0, 0, 0.72));
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.hero h1 {
+  color: #ffffff;
+}
+
+.hero .text-gradient {
+  background: linear-gradient(135deg, #f287c8 0%, #ff8cd1 55%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero .hero-lead {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.hero .hero-lead strong,
+.hero .stat-num {
+  color: #ffffff;
+}
+
+.hero .stat-label {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.hero .hero-stats {
+  border-top-color: rgba(255, 255, 255, 0.28);
+}
+
 .hero-wrap {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -352,9 +427,9 @@ nav a:hover {
   gap: 0.6rem;
   font-size: 0.82rem;
   font-weight: 500;
-  color: #30684e;
-  background: rgba(55, 126, 99, 0.09);
-  border: 1px solid rgba(55, 126, 99, 0.2);
+  color: #6e27e1;
+  background: rgba(242, 135, 200, 0.16);
+  border: 1px solid rgba(110, 39, 225, 0.2);
   padding: 0.45em 1.2em;
   border-radius: var(--r-full);
   margin-bottom: 1.8rem;
@@ -364,8 +439,8 @@ nav a:hover {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #4d966a;
-  box-shadow: 0 0 10px rgba(77, 150, 106, 0.55);
+  background: #ff8cd1;
+  box-shadow: 0 0 10px rgba(255, 140, 209, 0.65);
   animation: pulse 2s infinite;
 }
 
@@ -522,21 +597,21 @@ nav a:hover {
 }
 
 .icon-photo {
-  background: rgba(166, 94, 59, 0.1);
-  color: var(--purple-accent);
-  border: 1px solid rgba(166, 94, 59, 0.24);
+  background: rgba(242, 135, 200, 0.16);
+  color: #a32180;
+  border: 1px solid rgba(255, 140, 209, 0.36);
 }
 
 .icon-code {
-  background: rgba(55, 126, 99, 0.1);
-  color: var(--blue-primary);
-  border: 1px solid rgba(55, 126, 99, 0.22);
+  background: rgba(110, 39, 225, 0.1);
+  color: #6e27e1;
+  border: 1px solid rgba(110, 39, 225, 0.22);
 }
 
 .icon-design {
-  background: rgba(128, 100, 47, 0.1);
-  color: var(--gold-accent);
-  border: 1px solid rgba(128, 100, 47, 0.22);
+  background: rgba(9, 0, 214, 0.08);
+  color: #0900d6;
+  border: 1px solid rgba(9, 0, 214, 0.2);
 }
 
 .discipline-num {
@@ -612,7 +687,7 @@ nav a:hover {
   flex-wrap: wrap;
   gap: 6px;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.82);
   border: 1px solid var(--border-subtle);
   border-radius: var(--r-full);
   padding: 5px;
@@ -635,14 +710,14 @@ nav a:hover {
 
 .chip:hover {
   color: var(--text-white);
-  background: rgba(40, 107, 82, 0.08);
+  background: rgba(110, 39, 225, 0.08);
 }
 
 .chip[aria-pressed="true"] {
   background: var(--blue-primary);
   color: #ffffff;
   font-weight: 600;
-  box-shadow: 0 2px 10px rgba(40, 107, 82, 0.22);
+  box-shadow: 0 2px 10px rgba(110, 39, 225, 0.25);
 }
 
 .project-grid {
@@ -701,19 +776,19 @@ nav a:hover {
   text-transform: uppercase;
   padding: 0.3em 0.8em;
   border-radius: var(--r-full);
-  background: rgba(23, 56, 43, 0.86);
+  background: rgba(0, 0, 0, 0.84);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--text-white);
 }
 
-.badge-photo { border-color: rgba(166, 94, 59, 0.4); color: var(--purple-accent); }
-.badge-code  { border-color: rgba(55, 126, 99, 0.4); color: var(--blue-primary); }
-.badge-design{ border-color: rgba(128, 100, 47, 0.4); color: var(--gold-accent); }
+.badge-photo { border-color: rgba(163, 33, 128, 0.4); color: var(--cyan-accent); }
+.badge-code  { border-color: rgba(110, 39, 225, 0.4); color: var(--blue-primary); }
+.badge-design{ border-color: rgba(9, 0, 214, 0.4); color: var(--blue-accent); }
 
-.project-category-badge.badge-photo { color: #f3cfb8; border-color: rgba(243, 207, 184, 0.5); }
-.project-category-badge.badge-code { color: #c8e7d2; border-color: rgba(200, 231, 210, 0.5); }
-.project-category-badge.badge-design { color: #e8d7a8; border-color: rgba(232, 215, 168, 0.5); }
+.project-category-badge.badge-photo { color: #f287c8; border-color: rgba(242, 135, 200, 0.55); }
+.project-category-badge.badge-code { color: #ff8cd1; border-color: rgba(255, 140, 209, 0.55); }
+.project-category-badge.badge-design { color: #d6c1ff; border-color: rgba(110, 39, 225, 0.7); }
 
 .project-info {
   padding: 1.5rem;
@@ -795,7 +870,7 @@ nav a:hover {
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--text-secondary);
-  background: rgba(40, 107, 82, 0.04);
+  background: rgba(110, 39, 225, 0.035);
   border: 1px solid var(--border-subtle);
   padding: 0.45em 0.95em;
   border-radius: var(--r-md);
@@ -803,8 +878,8 @@ nav a:hover {
 }
 
 .tag:hover {
-  background: rgba(55, 126, 99, 0.1);
-  border-color: rgba(55, 126, 99, 0.3);
+  background: rgba(255, 140, 209, 0.14);
+  border-color: rgba(110, 39, 225, 0.26);
   color: var(--text-white);
   transform: translateY(-1px);
 }
@@ -848,7 +923,7 @@ nav a:hover {
   left: 1.2rem;
   right: 1.2rem;
   padding: 1rem 1.4rem;
-  background: rgba(23, 56, 43, 0.88);
+  background: rgba(0, 0, 0, 0.82);
   backdrop-filter: blur(20px);
   border: 1px solid var(--border-medium);
   border-radius: var(--r-lg);
@@ -864,7 +939,7 @@ nav a:hover {
 
 .ap-title {
   font-size: 0.78rem;
-  color: #c8e7d2;
+  color: #ffb5df;
   font-family: var(--font-mono);
   margin-top: 2px;
 }
@@ -981,7 +1056,7 @@ input, select, textarea {
   font-size: 0.95rem;
   color: var(--text-white);
   padding: 0.9em 1.2em;
-  background: rgba(255, 253, 248, 0.92);
+  background: rgba(255, 255, 255, 0.96);
   border: 1px solid var(--border-medium);
   border-radius: var(--r-md);
   width: 100%;
@@ -995,7 +1070,7 @@ input::placeholder, textarea::placeholder {
 input:focus, select:focus, textarea:focus {
   outline: none;
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px rgba(55, 126, 99, 0.2);
+  box-shadow: 0 0 0 3px rgba(110, 39, 225, 0.18);
   background: #ffffff;
 }
 
@@ -1013,8 +1088,8 @@ input:invalid:not(:placeholder-shown), .err {
 .form-status {
   margin-top: 1.6rem;
   padding: 1.2rem 1.6rem;
-  background: rgba(55, 126, 99, 0.1);
-  border: 1px solid rgba(55, 126, 99, 0.3);
+  background: rgba(242, 135, 200, 0.14);
+  border: 1px solid rgba(110, 39, 225, 0.24);
   color: var(--text-white);
   border-radius: var(--r-md);
   font-weight: 500;
@@ -1089,16 +1164,16 @@ dialog {
   border: 1px solid var(--border-medium);
   padding: 0;
   width: min(92vw, 920px);
-  background: rgba(255, 253, 248, 0.98);
+  background: rgba(255, 255, 255, 0.98);
   color: var(--text-primary);
   border-radius: var(--r-xl);
   overflow: hidden;
-  box-shadow: 0 24px 80px rgba(32, 53, 40, 0.2);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(28px);
 }
 
 dialog::backdrop {
-  background: rgba(23, 38, 29, 0.5);
+  background: rgba(0, 0, 0, 0.58);
   backdrop-filter: blur(14px);
 }
 
@@ -1170,7 +1245,7 @@ dialog::backdrop {
   left: 50%;
   bottom: 2rem;
   transform: translate(-50%, 40px);
-  background: rgba(255, 253, 248, 0.98);
+  background: rgba(255, 255, 255, 0.98);
   border: 1px solid var(--blue-accent);
   color: var(--text-white);
   font-size: 0.88rem;
@@ -1245,5 +1320,8 @@ dialog::backdrop {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+  .hero-video {
+    display: none;
   }
 }

@@ -24,7 +24,7 @@ const projects = [
     tags: 'Sony A7IV · 85mm f/1.4 · Natural Light',
     desc: 'An exploration of natural light and raw human presence in urban environments. Balanced chiaroscuro shadows with rich environmental context.',
     img: 'https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=800',
-    fallbackGrad: ['#24473a', '#6c9279']
+    fallbackGrad: ['#0900d6', '#ff8cd1']
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const projects = [
     tags: 'React · TypeScript · Tailwind · REST API',
     desc: 'Interactive developer analytics platform featuring real-time telemetry, customizable widget grid, responsive micro-interactions, and dark mode architecture.',
     img: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800',
-    fallbackGrad: ['#1c3f35', '#3f8064']
+    fallbackGrad: ['#6e27e1', '#f287c8']
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const projects = [
     tags: 'Figma · Brand Identity · Typography · Print',
     desc: 'Comprehensive visual identity system for a creative architecture collective, including modular logo marks, typographic scale, stationery, and digital guideline kits.',
     img: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
-    fallbackGrad: ['#714736', '#b77850']
+    fallbackGrad: ['#0900d6', '#6e27e1']
   },
   {
     id: 4,
@@ -57,7 +57,7 @@ const projects = [
     tags: 'Leica Q2 · 28mm Summilux · Studio Light',
     desc: 'Minimalist product study capturing lens reflections, tactile textures, and physical geometry under sculpted diffused studio light.',
     img: 'https://images.pexels.com/photos/598917/pexels-photo-598917.jpeg?auto=compress&cs=tinysrgb&w=800',
-    fallbackGrad: ['#355347', '#81957c']
+    fallbackGrad: ['#17151a', '#6e27e1']
   },
   {
     id: 5,
@@ -68,7 +68,7 @@ const projects = [
     tags: 'JavaScript ES6+ · Web Workers · CSS Grid',
     desc: 'Browser-based code editor and live preview sandbox with syntax highlighting, keyboard shortcuts, and instant DOM rendering.',
     img: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800',
-    fallbackGrad: ['#1f4f3f', '#61a07a']
+    fallbackGrad: ['#0900d6', '#ff8cd1']
   },
   {
     id: 6,
@@ -79,7 +79,7 @@ const projects = [
     tags: 'Figma · Prototyping · Component Library',
     desc: 'End-to-end user experience redesign for a fintech platform. Developed atomic design components, accessible color contrast systems, and micro-flow prototypes.',
     img: 'https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800',
-    fallbackGrad: ['#596742', '#a8a777']
+    fallbackGrad: ['#a32180', '#f287c8']
   },
   {
     id: 7,
@@ -90,7 +90,7 @@ const projects = [
     tags: 'Fujifilm X-T4 · 35mm f/2 · Landscape Optics',
     desc: 'Wide-angle horizon photography capturing daybreak fog rolling over sub-alpine peaks. Preserved atmospheric highlights and deep forest shadows.',
     img: 'https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=800',
-    fallbackGrad: ['#064e3b', '#059669']
+    fallbackGrad: ['#6e27e1', '#f287c8']
   },
   {
     id: 8,
@@ -101,7 +101,7 @@ const projects = [
     tags: 'HTML5 · Modern CSS · Smooth Scroll · Vanilla JS',
     desc: 'Bespoke web experience built with high-performance CSS animations, custom cursor parallax, responsive grid layouts, and zero heavy dependencies.',
     img: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
-    fallbackGrad: ['#385344', '#729476']
+    fallbackGrad: ['#0900d6', '#6e27e1']
   },
   {
     id: 9,
@@ -112,7 +112,7 @@ const projects = [
     tags: 'Adobe Illustrator · Photoshop · Swiss Grid',
     desc: 'A collection of experimental typographic posters exploring contrast, kinetic text paths, asymmetrical grids, and vibrant duotone palettes.',
     img: 'https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&w=800',
-    fallbackGrad: ['#824f39', '#cf8b62']
+    fallbackGrad: ['#6e27e1', '#ff8cd1']
   },
   {
     id: 10,
@@ -123,7 +123,7 @@ const projects = [
     tags: 'Medium Format Film · Hasselblad 500C/M',
     desc: 'Tactile editorial flatlay highlighting classic mechanical camera engineering, prime focal optics, and film textures.',
     img: 'https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg?auto=compress&cs=tinysrgb&w=800',
-    fallbackGrad: ['#1c1917', '#44403c']
+    fallbackGrad: ['#0900d6', '#17151a']
   },
   {
     id: 11,
@@ -134,7 +134,7 @@ const projects = [
     tags: 'Web Components · Storybook · CI/CD',
     desc: 'Cross-functional component library syncing design tokens from Figma directly into reusable, tested web interface components.',
     img: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
-    fallbackGrad: ['#283f3b', '#6b9d90']
+    fallbackGrad: ['#17151a', '#a32180']
   },
   {
     id: 12,
@@ -145,7 +145,7 @@ const projects = [
     tags: 'Branding · Marketing Assets · Social Kit',
     desc: 'Holistic brand collateral and social campaign assets for a modern creative studio, combining photography overlays with clean geometric vectors.',
     img: 'https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=800',
-    fallbackGrad: ['#784931', '#bb784e']
+    fallbackGrad: ['#0900d6', '#f287c8']
   }
 ];
 
