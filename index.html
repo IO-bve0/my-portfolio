@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caelum Creatives | Photography Portfolio</title>
+<meta name="description" content="Caelum Creatives: portraits, property and architectural photography, brand editorials and fine art sky prints.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="aperture" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="24" cy="24" r="21"/><path d="M24 3l8 14M43 14L28 20M43 34L30 27M24 45l-8-14M5 34l14-7M5 14l15 6"/><circle cx="24" cy="24" r="4" fill="currentColor"/></symbol>
+  <symbol id="seal" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="rgba(58,43,39,.35)" stroke="currentColor" stroke-width="2"/><circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-dasharray="1 3"/><use href="#aperture" x="33" y="20" width="34" height="34"/><text x="50" y="68" text-anchor="middle" font-size="9" letter-spacing="1.5" fill="currentColor" font-family="-apple-system,SF Pro Display,Helvetica Neue,sans-serif">CAELUM</text><text x="50" y="79" text-anchor="middle" font-size="7" letter-spacing="1.5" fill="currentColor" font-family="-apple-system,SF Pro Display,Helvetica Neue,sans-serif">CREATIVES</text></symbol>
+  <filter id="mb"><feGaussianBlur id="mbf" stdDeviation="0 0"/></filter>
+</svg>
+
+<header>
+  <a class="logo" href="#home" aria-label="Caelum Creatives, home">
+    <svg aria-hidden="true"><use href="#aperture"/></svg>
+    <span class="script">caelum</span><span>creatives</span>
+  </a>
+  <nav aria-label="Main">
+    <a href="#motion">Motion</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Book</a>
+    <button class="btn ghost" id="gridBtn" aria-pressed="false" title="Show rule-of-thirds overlay">Grid</button>
+  </nav>
+</header>
+
+<main id="main">
+<section id="home" class="vf" aria-label="Viewfinder">
+  <div class="thirds" aria-hidden="true"></div>
+  <i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i>
+  <div class="pol" aria-hidden="true"><div></div><span class="script"></span></div>
+  <div class="pol" aria-hidden="true"><div></div><span class="script"></span></div>
+  <div class="pol" aria-hidden="true"><div></div><span class="script"></span></div>
+
+  <div class="hero-card">
+    <svg class="crest" viewBox="0 0 120 120" role="img" aria-label="Caelum Creatives crest">
+      <defs><path id="arc" d="M16 60a44 44 0 0 1 88 0"/></defs>
+      <circle cx="60" cy="60" r="57" fill="#FFE7C2" stroke="#8A6A62" stroke-width="2"/>
+      <circle cx="60" cy="60" r="35" fill="none" stroke="#8A6A62" stroke-dasharray="2 4"/>
+      <text font-size="9" letter-spacing="2.5" fill="#3A2B27" font-family="-apple-system,SF Pro Display,Helvetica Neue,sans-serif"><textPath href="#arc" startOffset="50%" text-anchor="middle">CAELUM CREATIVES</textPath></text>
+      <use href="#aperture" x="38" y="38" width="44" height="44" color="#8A6A62"/>
+      <text x="60" y="98" text-anchor="middle" font-size="7" letter-spacing="2" fill="#3A2B27" font-family="-apple-system,SF Pro Display,Helvetica Neue,sans-serif">PHOTOGRAPHY</text>
+    </svg>
+    <p class="script tagline">Calm Horizons – Fleeting Moments – Eternal Motion</p>
+    <h1 id="h1" aria-live="polite">Calm Horizons</h1>
+    <p id="sub">Stillness, held in light.</p>
+    <p class="exif" aria-label="Camera settings"><span></span><span></span><span></span><span></span></p>
+    <div class="moods" role="group" aria-label="Choose a mood">
+      <button class="chip" data-m="calm" aria-pressed="true">Calm Horizons</button>
+      <button class="chip" data-m="fleet" aria-pressed="false">Fleeting Moments</button>
+      <button class="chip" data-m="eternal" aria-pressed="false">Eternal Motion</button>
+    </div>
+  </div>
+</section>
+
+<section id="motion" aria-labelledby="mbh">
+  <div class="wrap">
+    <h2 id="mbh">Motion Blur Showcase</h2>
+    <p class="lead">Slow the shutter and the frames start to move. Freeze a frame to bring it back into focus.</p>
+    <div class="mb-ctrl">
+      <label for="shutter">Shutter speed</label>
+      <input id="shutter" type="range" min="0" max="6" step="1" value="3">
+      <output id="shutOut" for="shutter">1/15s</output>
+      <button class="btn ghost" id="freeze" aria-pressed="false">Freeze frame</button>
+    </div>
+    <div class="mb-view"><div class="mb-track" id="mbTrack"></div></div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="wrap">
+    <h2>Portfolio</h2>
+    <p class="lead">Tap any frame to see it larger.</p>
+    <div class="filters" role="group" aria-label="Filter photos">
+      <button class="chip" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" data-f="calm" aria-pressed="false">Calm Horizons</button>
+      <button class="chip" data-f="fleet" aria-pressed="false">Fleeting Moments</button>
+      <button class="chip" data-f="eternal" aria-pressed="false">Eternal Motion</button>
+      <button class="chip" data-f="prop" aria-pressed="false">@ Properties</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="services" class="tint">
+  <div class="wrap">
+    <h2>Services</h2>
+    <p class="lead">Choose one and the booking form fills itself in.</p>
+    <div class="cards">
+      <button class="card" data-svc="Portraits"><h3>Portraits</h3><p>Unhurried sessions for people, couples and families, in natural light.</p><span class="script">Book portraits</span></button>
+      <button class="card" data-svc="@ Properties & Architectural"><h3>@ Properties &amp; Architectural</h3><p>Clean, bright interiors and exteriors for listings, builders and designers.</p><span class="script">Book a property shoot</span></button>
+      <button class="card" data-svc="Brand Editorials"><h3>Brand Editorials</h3><p>Story-led imagery for small brands, launches and campaigns.</p><span class="script">Book an editorial</span></button>
+      <button class="card" data-svc="Fine Art Sky Prints"><h3>Fine Art Sky Prints</h3><p>Limited sky and horizon prints, made to hang.</p><span class="script">Ask about prints</span></button>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <figure class="portrait">
+      <img id="profile" src="profile.jpg" alt="Portrait of the photographer behind Caelum Creatives" width="480" height="600">
+    </figure>
+    <div>
+      <h2>About &amp; Brand</h2>
+      <p>Caelum is Latin for sky. Caelum Creatives began with a simple habit: looking up, and waiting for the light to change. Every shoot, from a quiet portrait to a finished building, is made the same way: slowly, with attention to the horizon and the moment that will not come twice.</p>
+      <h3>Colors</h3>
+      <div class="swatches">
+        <button class="sw" data-hex="#FFE7C2" style="background:#FFE7C2" aria-label="Copy Cream, #FFE7C2"><b>Cream</b>#FFE7C2</button>
+        <button class="sw" data-hex="#D9CCC4" style="background:#D9CCC4" aria-label="Copy Taupe, #D9CCC4"><b>Taupe</b>#D9CCC4</button>
+        <button class="sw" data-hex="#8A6A62" style="background:#8A6A62;color:#fff" aria-label="Copy Mocha, #8A6A62"><b>Mocha</b>#8A6A62</button>
+        <button class="sw" data-hex="#C6DBE0" style="background:#C6DBE0" aria-label="Copy Sky Blue, #C6DBE0"><b>Sky Blue</b>#C6DBE0</button>
+        <button class="sw" data-hex="#FFC2E8" style="background:#FFC2E8" aria-label="Copy Blush Pink, #FFC2E8"><b>Blush Pink</b>#FFC2E8</button>
+      </div>
+      <h3>Type</h3>
+      <div class="specs">
+        <div><p class="aa">Aa</p><p>SF Pro<br>Headings and body</p></div>
+        <div><p class="aa script">Aa</p><p>Snell Roundhand<br>Script accents</p></div>
+      </div>
+      <h3>Watermark</h3>
+      <div class="sealtile"><svg aria-label="Caelum Creatives watermark seal" role="img"><use href="#seal"/></svg><p>Placed on every shared image. You can switch it off when viewing a photo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="tint">
+  <div class="wrap narrow">
+    <h2>Book a session</h2>
+    <p class="lead">Tell me what you have in mind. All fields except the message are required.</p>
+    <form id="form" novalidate>
+      <label for="name">Your name</label>
+      <input id="name" name="name" autocomplete="name" required>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+      <label for="service">Service</label>
+      <select id="service" name="service" required>
+        <option value="" disabled selected>Choose a service</option>
+        <option>Portraits</option>
+        <option>@ Properties &amp; Architectural</option>
+        <option>Brand Editorials</option>
+        <option>Fine Art Sky Prints</option>
+      </select>
+      <label for="date">Preferred date</label>
+      <input id="date" name="date" type="date" required>
+      <label for="msg">Message (optional)</label>
+      <textarea id="msg" name="msg" rows="4"></textarea>
+      <button class="btn" type="submit">Send inquiry</button>
+    </form>
+    <p id="ok" class="ok" role="status" hidden></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><span class="script">caelum creatives</span> &nbsp;Calm Horizons – Fleeting Moments – Eternal Motion</p>
+  <p><small>&copy; <span id="yr"></span> Caelum Creatives. All images protected.</small></p>
+</footer>
+
+<dialog id="lb" aria-label="Photo viewer">
+  <div class="lbimg"><img id="lbimg" alt=""><svg class="wm" aria-hidden="true"><use href="#seal"/></svg></div>
+  <div class="lbbar">
+    <p id="lbcap"></p>
+    <button class="btn ghost" id="wmBtn" aria-pressed="true">Watermark: On</button>
+    <button class="btn" id="lbClose">Close</button>
+  </div>
+</dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
